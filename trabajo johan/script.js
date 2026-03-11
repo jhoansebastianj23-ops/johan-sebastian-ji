@@ -1,24 +1,25 @@
-function agregarTarea() {
-    const texto = document.getElementById("tarea").value;
-    const estado = document.getElementById("estado").value;
-    const lista = document.getElementById("listaTareas");
+function buscarPokemon(){
 
-    if (texto === "") {
-        alert("Escribe una tarea");
-        return;
-    }
+    const nombre = document.getElementById("nombrePokemon").value.toLowerCase()
 
-    const div = document.createElement("div");
-    div.classList.add("tarea");
+    fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+    .then(respuesta => respuesta.json())
+    .then(data => {
 
-    if (estado === "pendiente") {
-        div.classList.add("amarillo");
-    } else {
-        div.classList.add("verde");
-    }
+        const resultado = document.getElementById("resultado")
 
-    div.textContent = texto;
-    lista.appendChild(div);
+        resultado.innerHTML = `
+        <div class="card">
+            <h2>${data.name}</h2>
+            <img src="${data.sprites.front_default}">
+            <p><b>Altura:</b> ${data.height}</p>
+            <p><b>Peso:</b> ${data.weight}</p>
+        </div>
+        `
+    })
 
-    document.getElementById("tarea").value = "";
+    .catch(error =>{
+        document.getElementById("resultado").innerHTML =
+        "<p>Pokémon no encontrado</p>"
+    })
 }
