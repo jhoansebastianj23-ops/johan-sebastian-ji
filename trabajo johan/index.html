@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <input type="text" id="tarea" placeholder="Dar clase a la 651">
+        
+        <select id="estado">
+            <option value="pendiente">PENDIENTE</option>
+            <option value="finalizado">FINALIZADO</option>
+        </select>
+
+        <button onclick="agregarTarea()">Agregar</button>
+
+        <div class="lista" id="listaTareas">
+            <!-- Tareas aquí -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
