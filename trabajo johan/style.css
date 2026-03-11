@@ -1,53 +1,42 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.contenedor {
-    width: 400px;
+body{
+    font-family: Arial;
     text-align: center;
+    background: #f5f5f5;
 }
 
-input, select {
-    padding: 8px;
-    margin: 5px;
-    width: 70%;
+h1{
+    color: #333;
 }
 
-button {
-    background-color: #66ff66;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
+.contenedor{
+    margin:20px;
 }
 
-.lista {
-    margin-top: 30px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+input{
+    padding:10px;
+    width:200px;
 }
 
-.tarea {
-    padding: 15px;
-    border-radius: 15px;
-    color: #000;
+button{
+    padding:10px;
+    background:#ffcb05;
+    border:none;
+    cursor:pointer;
 }
 
-.azul {
-    background-color: #b3e5fc;
+#resultado{
+    margin-top:20px;
 }
 
-.amarillo {
-    background-color: #fff9c4;
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:250px;
+    margin:auto;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
-.verde {
-    background-color: #b9f6ca;
+img{
+    width:120px;
 }
